@@ -6,6 +6,7 @@ This is a simple news feed application built with Flask and MySQL. It supports b
 ## Table of Contents
 - [Requirements](#requirements)
 - [Project Structure](#project-structure)
+- [Database ERD](#database-erd)
 - [Setup Instructions](#setup-instructions)
   - [Option 1: Running with Docker Compose](#option-1-running-with-docker-compose)
   - [Option 2: Running with Virtual Environment (venv)](#option-2-running-with-virtual-environment-venv)
@@ -38,6 +39,10 @@ This is a simple news feed application built with Flask and MySQL. It supports b
 ├── requirements.txt                   # Python dependencies
 └── README.md                          # Project instructions
 ```
+
+## Database ERD
+
+![Database ERD](db_diagrams/erd_diagram.png)
 
 ## Setup Instructions
 
