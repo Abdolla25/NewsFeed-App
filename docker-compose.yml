@@ -1,0 +1,27 @@
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_DATABASE: news_feed_db
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./sql/schema.sql:/schema.sql
+    ports:
+      - "3306:3306"
+  app:
+    build: .
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=yourpassword
+      - DB_NAME=news_feed_db
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+
+volumes:
+  db_data:
