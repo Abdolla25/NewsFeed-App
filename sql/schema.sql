@@ -63,3 +63,6 @@ ALTER TABLE `Share` ADD FOREIGN KEY (`post_id`) REFERENCES `Post` (`id`);
 ALTER TABLE `Follow` ADD FOREIGN KEY (`follower_id`) REFERENCES `User` (`id`);
 
 ALTER TABLE `Follow` ADD FOREIGN KEY (`followed_id`) REFERENCES `User` (`id`);
+
+INSERT INTO User (username, email, password) 
+VALUES ('testuser', 'testuser@example.com', 'securepassword');
