@@ -49,17 +49,23 @@ This is a simple news feed application built with Flask and MySQL. It supports b
    cd NewsFeed-App
    ```
 
-2. **Build the Docker Images**:
+2. **Copy the .env file**:
+   Make sure to copy the `.env.example` file to `.env` and configure the database credentials.
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Build the Docker Images**:
    ```bash
    docker compose build
    ```
 
-3. **Start the Services**:
+4. **Start the Services**:
    ```bash
    docker compose up
    ```
 
-4. **Prepare the Database**:
+5. **Prepare the Database**:
    To prepare the database, open a terminal and run the following commands:
    ```bash
    docker compose exec db bash
@@ -67,10 +73,10 @@ This is a simple news feed application built with Flask and MySQL. It supports b
    exit
    ```
 
-5. **Access the Application**:
+6. **Access the Application**:
    Your Flask application will be accessible at `http://localhost:5000`, and the MySQL database will be running at `localhost:3306`.
 
-6. **Stop the Services**:
+7. **Stop the Services**:
    To stop the services, use:
    ```bash
    docker compose down
@@ -84,12 +90,18 @@ This is a simple news feed application built with Flask and MySQL. It supports b
    cd NewsFeed-App
    ```
 
-2. **Create a Virtual Environment**:
+2. **Copy the .env file**:
+   Make sure to copy the `.env.example` file to `.env` and configure the database credentials.
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Create a Virtual Environment**:
    ```bash
    python -m venv venv
    ```
 
-3. **Activate the Virtual Environment**:
+4. **Activate the Virtual Environment**:
    - On Windows:
      ```bash
      venv\Scripts\activate
@@ -99,21 +111,21 @@ This is a simple news feed application built with Flask and MySQL. It supports b
      source venv/bin/activate
      ```
 
-4. **Install Dependencies**:
+5. **Install Dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Set Up MySQL**:
+6. **Set Up MySQL**:
    Make sure to have a MySQL server running. Create a database named `news_feed_db`.
 
-6. **Run the Application**:
+7. **Run the Application**:
    ```bash
    EXPORT FLASK_APP=app.main
    flask run
    ```
 
-7. **Prepare the Database**:
+8. **Prepare the Database**:
    To prepare the database, open a terminal and run the following commands:
    ```bash
    docker compose exec db bash
@@ -121,7 +133,7 @@ This is a simple news feed application built with Flask and MySQL. It supports b
    exit
    ```
 
-8. **Access the Application**:
+9. **Access the Application**:
    Your Flask application will be accessible at `http://localhost:5000`.
 
 ## API Endpoints
